@@ -1,0 +1,49 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.0",
+    "id": "<INSERT_APP_ID_HERE>",
+    "packageName": "<INSERT_PACKAGE_NAME_HERE>",
+    "developer": {
+      "name": "<INSERT_DEVELOPER_NAME_HERE>",
+      "websiteUrl": "<INSERT_URL_HERE>",
+      "privacyUrl": "<INSERT_URL_HERE>",
+      "termsOfUseUrl": "<INSERT_URL_HERE>"
+    },
+    "name": {
+      "short": "netboxbot",
+      "full": "Teams bot to interact with NetBox"
+    },
+    "description": {
+      "short": "Teams bot to interact with NetBox",
+      "full": "NetBox search and query from Teams"
+    },
+    "icons": {
+      "outline": "icon-outline.png",
+      "color": "icon-color.png"
+    },
+    "accentColor": "#abcdef",
+    "composeExtensions": [
+      {
+        "botId": "<INSERT_APP_ID_HERE>",
+        "canUpdateConfiguration": true,
+        "commands": [
+          {
+            "id": "searchQuery",
+            "context": [ "compose", "commandBox" ],
+            "description": "Command to run query",
+            "title": "Search",
+            "type": "query",
+            "parameters": [
+              {
+                "name": "searchQuery",
+                "title": "Search Query",
+                "description": "Your search query",
+                "inputType": "text"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

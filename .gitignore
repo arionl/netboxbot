@@ -1,0 +1,5 @@
+!**/__pycache__/
+/.pylintrc
+/.idea
+/teams_app_manifest/manifest.json
+/venv/
